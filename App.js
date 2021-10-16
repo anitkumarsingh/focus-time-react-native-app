@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Focus } from './src/features/Focus';
+import { Focus } from './src/features/focus/Focus';
 import { StyleSheet, View, Text } from 'react-native';
+import { colors } from './src/utils/colors';
 
 const App = () => {
 	const [focusSubject, setFocusSubject] = useState(null);
@@ -19,7 +20,7 @@ const App = () => {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: '#252250'
+		backgroundColor: colors.darkBlue
 	}
 });
 

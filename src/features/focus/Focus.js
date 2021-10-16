@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { TextInput } from 'react-native-paper';
-import { RoundedButton } from '../components/RoundedButton';
+import { RoundedButton } from '../../components/RoundedButton';
+import { colors } from '../../utils/colors';
+import { sizes, spacing } from '../../utils/sizes';
 
 export const Focus = ({ addSubject }) => {
 	const [tempSubject, setTempSubject] = useState(null);
-	console.log('focus comp', tempSubject);
+
 	return (
 		<View style={styles.titleContainer}>
 			<Text style={styles.title}>What would you like to focus on ?</Text>
@@ -25,13 +27,13 @@ export const Focus = ({ addSubject }) => {
 const styles = StyleSheet.create({
 	titleContainer: {
 		flex: 0.5,
-		padding: 16,
+		padding: spacing.md,
 		justifyContent: 'center'
 	},
 	title: {
-		color: 'white',
+		color:colors.white,
 		fontWeight: 'bold',
-		fontSize: 24
+		fontSize: sizes.lg
 	},
 	inputContainer: {
 		paddingTop: 20,
